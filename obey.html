@@ -119,18 +119,94 @@
       color: #00CED1;
     }
 
-    /* Social Links */
-    .social-links {
+    /* History Section */
+    .history-timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
       margin-top: 2rem;
     }
-    .social-links a {
-      color: #00CED1;
-      font-size: 1.5rem;
-      margin: 0 0.5rem;
-      transition: color 0.3s ease;
+    .history-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+      text-align: left;
     }
-    .social-links a:hover {
-      color: #009999;
+    .history-item h3 {
+      color: #00CED1;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Global Locations Section */
+    .flags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .flags img {
+      width: 50px;
+      height: auto;
+    }
+
+    /* Notable Members Section */
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .member-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .member-card h3 {
+      color: #00CED1;
+    }
+
+    /* Backgrounds Section */
+    .backgrounds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .background-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .background-card h3 {
+      color: #00CED1;
+    }
+
+    /* Games Section */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .game-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .game-card img {
+      width: 100px;
+      height: auto;
     }
 
     /* Footer */
@@ -178,45 +254,144 @@
     <p>Our server features a mix of <strong>freeroam</strong>, <strong>military operations</strong>, <strong>car meets</strong>, <strong>airshows</strong>, and <strong>light RP</strong>. Join us for an unforgettable experience in the skies and on the ground!</p>
   </div>
 
-  <!-- Features Section -->
+  <!-- History Section -->
   <div class="section">
-    <h2>Server Features</h2>
-    <div class="features">
-      <div class="feature-card">
-        <h3>Freeroam</h3>
-        <p>Explore a vast open world with custom vehicles, activities, and hidden secrets.</p>
+    <h2>Our History</h2>
+    <div class="history-timeline">
+      <div class="history-item">
+        <h3>Live Chat - 2012</h3>
+        <p>Started with 150 members.</p>
       </div>
-      <div class="feature-card">
-        <h3>Military Operations</h3>
-        <p>Engage in tactical missions with military-grade vehicles and aircraft.</p>
+      <div class="history-item">
+        <h3>SAMP - 2014</h3>
+        <p>Grew to 250 members.</p>
       </div>
-      <div class="feature-card">
-        <h3>Car Meets</h3>
-        <p>Show off your custom rides and connect with other car enthusiasts.</p>
+      <div class="history-item">
+        <h3>Ghost Recon Phantoms - 2015</h3>
+        <p>30 members.</p>
       </div>
-      <div class="feature-card">
-        <h3>Airshows</h3>
-        <p>Participate in or watch breathtaking airshows with skilled pilots.</p>
+      <div class="history-item">
+        <h3>GTA V - 2017</h3>
+        <p>20 members.</p>
       </div>
-      <div class="feature-card">
-        <h3>Light RP</h3>
-        <p>Immerse yourself in light roleplay scenarios with other players.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Flight Sim</h3>
-        <p>Experience realistic flight mechanics and challenges.</p>
+      <div class="history-item">
+        <h3>FiveM Community - 2019</h3>
+        <p>Expanded to 1500 members.</p>
       </div>
     </div>
   </div>
 
-  <!-- Join Us Section -->
+  <!-- Global Locations Section -->
   <div class="section">
-    <h2>Join Us</h2>
-    <p>Connect with us on Discord, Instagram, and YouTube to stay updated and join the community!</p>
-    <div class="social-links">
-      <a href="https://discord.gg/6NGzkSjwgs" target="_blank"><i class="fab fa-discord"></i></a>
-      <a href="https://www.instagram.com/teamobeygta/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCFJjmj1YRKjTVGpkXW1tFGA" target="_blank"><i class="fab fa-youtube"></i></a>
+    <h2>Global Locations</h2>
+    <div class="flags">
+      <img src="https://flagcdn.com/gb.svg" alt="UK Flag" title="UK">
+      <img src="https://flagcdn.com/zw.svg" alt="Zimbabwe Flag" title="Zimbabwe">
+      <img src="https://flagcdn.com/us.svg" alt="USA Flag" title="USA">
+      <img src="https://flagcdn.com/au.svg" alt="Australia Flag" title="Australia">
+      <img src="https://flagcdn.com/nl.svg" alt="Netherlands Flag" title="Netherlands">
+      <img src="https://flagcdn.com/pl.svg" alt="Poland Flag" title="Poland">
+      <img src="https://flagcdn.com/de.svg" alt="Germany Flag" title="Germany">
+      <img src="https://flagcdn.com/bg.svg" alt="Bulgaria Flag" title="Bulgaria">
+      <img src="https://flagcdn.com/es.svg" alt="Spain Flag" title="Spain">
+      <img src="https://flagcdn.com/it.svg" alt="Italy Flag" title="Italy">
+      <img src="https://flagcdn.com/gr.svg" alt="Greece Flag" title="Greece">
+      <img src="https://flagcdn.com/my.svg" alt="Malaysia Flag" title="Malaysia">
+      <img src="https://flagcdn.com/eg.svg" alt="Egypt Flag" title="Egypt">
+      <img src="https://flagcdn.com/in.svg" alt="India Flag" title="India">
+    </div>
+  </div>
+
+  <!-- Notable Members Section -->
+  <div class="section">
+    <h2>Notable Members & Performances</h2>
+    <div class="members-grid">
+      <div class="member-card">
+        <h3>Acepilot2k7</h3>
+      </div>
+      <div class="member-card">
+        <h3>SkylineGTRFreak</h3>
+      </div>
+      <div class="member-card">
+        <h3>DopeMeets</h3>
+      </div>
+      <div class="member-card">
+        <h3>Aeroknots</h3>
+      </div>
+      <div class="member-card">
+        <h3>Patrulla Aguila</h3>
+      </div>
+      <div class="member-card">
+        <h3>Black Knights</h3>
+      </div>
+      <div class="member-card">
+        <h3>Lazer Demo Team</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backgrounds Section -->
+  <div class="section">
+    <h2>Our Backgrounds</h2>
+    <div class="backgrounds-grid">
+      <div class="background-card">
+        <h3>Ex-Military</h3>
+      </div>
+      <div class="background-card">
+        <h3>Current Pilots</h3>
+      </div>
+      <div class="background-card">
+        <h3>Lawyers</h3>
+      </div>
+      <div class="background-card">
+        <h3>Car Mechanics</h3>
+      </div>
+      <div class="background-card">
+        <h3>University Students</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Games We Play Section -->
+  <div class="section">
+    <h2>Games We Play</h2>
+    <div class="games-grid">
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/GTAV_logo.svg/1200px-GTAV_logo.svg.png" alt="GTA 5 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/FiveM_logo.svg/1200px-FiveM_logo.svg.png" alt="FiveM Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Helldivers2.jpg/220px-Helldivers2.jpg" alt="Helldivers 2 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Counter-Strike_Global_Offensive_logo.svg/1200px-Counter-Strike_Global_Offensive_logo.svg.png" alt="CS:GO Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Arma_3_cover_art.jpg/220px-Arma_3_cover_art.jpg" alt="Arma 3 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Arma_Reforger_cover_art.jpg/220px-Arma_Reforger_cover_art.jpg" alt="Arma Reforger Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Forza_Horizon_5_cover_art.jpg/220px-Forza_Horizon_5_cover_art.jpg" alt="Forza Horizon 5 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Ghost_Recon_Wildlands_cover_art.jpg/220px-Ghost_Recon_Wildlands_cover_art.jpg" alt="Ghost Recon Wildlands Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Ghost_Recon_Breakpoint_cover_art.jpg/220px-Ghost_Recon_Breakpoint_cover_art.jpg" alt="Ghost Recon Breakpoint Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Insurgency_Sandstorm.jpg/220px-Insurgency_Sandstorm.jpg" alt="Insurgency Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/The_Crew_2_cover_art.jpg/220px-The_Crew_2_cover_art.jpg" alt="The Crew 2 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Call_of_Duty_Modern_Warfare_II_logo.svg/1200px-Call_of_Duty_Modern_Warfare_II_logo.svg.png" alt="Call of Duty Logo">
+      </div>
     </div>
   </div>
 
@@ -228,6 +403,4 @@
       <a href="https://www.instagram.com/teamobeygta/" target="_blank">Instagram</a> |
       <a href="https://www.youtube.com/channel/UCFJjmj1YRKjTVGpkXW1tFGA" target="_blank">YouTube</a>
     </p>
-  </footer>
-</body>
-</html>
+  </
