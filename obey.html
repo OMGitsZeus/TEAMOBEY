@@ -54,6 +54,7 @@
     .hero img.logo {
       width: 200px;
       margin-bottom: 1rem;
+      transition: opacity 0.5s ease;
     }
     .hero h1 {
       font-size: 4rem;
@@ -224,27 +225,73 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Background Collage */
+    .background-collage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      opacity: 0.5;
+    }
+    .background-collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Scroll Fade Effect */
+    .scroll-fade {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    .scroll-fade.hidden {
+      opacity: 0;
+    }
   </style>
 </head>
 <body>
-  <!-- Hero Section with Video Background -->
+  <!-- Background Collage -->
+  <div class="background-collage">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1211031435306340414/Screenshot_2024-02-24_141405.png?ex=6799d82a&is=679886aa&hm=c6c4965d22bca542d2bf3bfe1f20372d51c370a312d8cdffbb1939f16917d2a0&=&format=webp&quality=lossless&width=1840&height=1138" alt="Background Image 1">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1169045480186060830/image.png?ex=679a07b2&is=6798b632&hm=4c7fe7329cba5d642df60657a6e2fd88457a86baa674e824f246a135bb7c88a3&=&format=webp&quality=lossless&width=2160&height=1044" alt="Background Image 2">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1161487830476935218/218_20231010191418_1-2.png?ex=67998fd6&is=67983e56&hm=b26d68b398003a6b46c7b81447885a89543896de268b4223f3e4186cb11187b9&=&format=webp&quality=lossless&width=1100&height=618" alt="Background Image 3">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1161485256319316089/218_20231010185032_1-2.png?ex=67998d70&is=67983bf0&hm=0dca4b9fc87ab5c386780b406e0c377614774a9a7eaf093f6db86375f96101b4&=&format=webp&quality=lossless&width=1100&height=618" alt="Background Image 4">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1161485228238446683/C130J_AK.png?ex=67998d69&is=67983be9&hm=e26bf115ce9354449ef72f0fcab4bfab7d38b08fdbd1be50c992194a568e1627&=&format=webp&quality=lossless&width=2022&height=1138" alt="Background Image 5">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1159233653314957382/20231004213143_1.jpg?ex=6799ee38&is=67989cb8&hm=7a5fab6a8e9ca5e12133ae315a7916a1d5720e05e87fbbc7e46794a76621175a&=&format=webp&width=2022&height=1138" alt="Background Image 6">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1158129812355952690/20231001205231_1.jpg?ex=6799deb0&is=67988d30&hm=2b2f9b5e1b10fa2c83d987765eb0cd0070c006e6be8c033d726753b5e5488535&=&format=webp&width=2022&height=1138" alt="Background Image 7">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1158002212853784586/20231001122646_1.jpg?ex=679a109a&is=6798bf1a&hm=aa65717c3e1e2d32440fc6451101cf948e1a041b9c28381eddaa021864a01c80&=&format=webp&width=2022&height=1138" alt="Background Image 8">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1157574366150795344/image.png?ex=6799d3a3&is=67988223&hm=3914b91540bb118232b3133c6bd742f3b8bb99f7a3eb0272728c45364d9663da&=&format=webp&quality=lossless&width=2022&height=1138" alt="Background Image 9">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1157574365714583552/image.png?ex=6799d3a3&is=67988223&hm=eed62decd2bdaead1411eef716320218185f4ae500177e86d669a6b6e0f1a0a9&=&format=webp&quality=lossless&width=2022&height=1138" alt="Background Image 10">
+    <img src="https://media.discordapp.net/attachments/529326022068535296/1156949700805656596/image.png?ex=6799881f&is=6798369f&hm=4184bc74c124030f19957e4a4d7c695999a33b5e3316b219e0bfd9b1e799bed7&=&format=webp&quality=lossless&width=2160&height=904" alt="Background Image 11">
+  </div>
+
+  <!-- Hero Section -->
   <div class="hero">
-    <!-- YouTube Video Embed -->
-<iframe
-  class="video-background"
-  src="https://www.youtube.com/embed/zQkf0LSED4g?autoplay=1&mute=1&loop=1&playlist=zQkf0LSED4g&controls=0&showinfo=0&rel=0&start=25"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
     <!-- Hero Content -->
     <div class="hero-content">
-      <img src="https://media.discordapp.net/attachments/529330179655335951/1284181647562113146/logo3.png?ex=6799a79b&is=6798561b&hm=39da0566ee1119b42015741a6cc4f08031b4132ab0e39d1c4af5add8c77d3fa3&=&format=webp&quality=lossless&width=1138&height=1138" alt="TEAM OBEY Logo" class="logo">
+      <img src="https://media.discordapp.net/attachments/529330179655335951/1284181647562113146/logo3.png?ex=6799a79b&is=6798561b&hm=39da0566ee1119b42015741a6cc4f08031b4132ab0e39d1c4af5add8c77d3fa3&=&format=webp&quality=lossless&width=1138&height=1138" alt="TEAM OBEY Logo" class="logo scroll-fade">
       <h1>TEAM OBEY</h1>
       <p>Rule the Roads then take to the Skies.</p>
       <a href="https://discord.gg/6NGzkSjwgs" class="cta-button" target="_blank">Join Discord</a>
       <a href="#about" class="cta-button">Learn More</a>
     </div>
+  </div>
+
+  <!-- YouTube Video Section -->
+  <div class="section">
+    <iframe
+      class="video-background"
+      src="https://www.youtube.com/embed/zQkf0LSED4g?autoplay=1&mute=1&loop=1&playlist=zQkf0LSED4g&controls=0&showinfo=0&rel=0&start=25"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
 
   <!-- About Section -->
@@ -353,48 +400,48 @@
   </div>
 
   <!-- Games We Play Section -->
-<div class="section">
-  <h2>Games We Play</h2>
-  <div class="games-grid">
-    <div class="game-card">
-      <img src="https://static.vecteezy.com/system/resources/previews/027/127/540/non_2x/grand-theft-auto-gta-v-logo-grand-theft-auto-gta-v-icon-transparent-free-png.png" alt="GTA 5 Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/FiveM-Logo.png" alt="FiveM Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://logos-world.net/wp-content/uploads/2024/11/Helldivers-2-Logo.png" alt="Helldivers 2 Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://logos-world.net/wp-content/uploads/2023/02/CSGO-Logo.png" alt="CS:GO Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/ArmA_3_Logo_%28Black_Transparent%29_%28SVG%29.svg/800px-ArmA_3_Logo_%28Black_Transparent%29_%28SVG%29.svg.png" alt="Arma 3 Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Arma_Reforger_Logo_%28Black_Transparent%29.svg/1200px-Arma_Reforger_Logo_%28Black_Transparent%29.svg.png" alt="Arma Reforger Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Forza_Horizon_logo.svg/2498px-Forza_Horizon_logo.svg.png" alt="Forza Horizon 5 Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Tom_Clancy%E2%80%99s_Ghost_Recon_Wildlands_%E2%80%93_Game_logo.svg" alt="Ghost Recon Wildlands Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://media.gamestop.com/i/gamestop/Ghost_Recon_Logo/ghost-recon-breakpoint.png" alt="Ghost Recon Breakpoint Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Insurgency_Logo.png" alt="Insurgency Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/The_Crew_2_Logo.png" alt="The Crew 2 Logo">
-    </div>
-    <div class="game-card">
-      <img src="https://logos-world.net/wp-content/uploads/2021/02/Call-of-Duty-Logo-2012-2013.png" alt="Call of Duty Logo">
+  <div class="section">
+    <h2>Games We Play</h2>
+    <div class="games-grid">
+      <div class="game-card">
+        <img src="https://static.vecteezy.com/system/resources/previews/027/127/540/non_2x/grand-theft-auto-gta-v-logo-grand-theft-auto-gta-v-icon-transparent-free-png.png" alt="GTA 5 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/FiveM-Logo.png" alt="FiveM Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://logos-world.net/wp-content/uploads/2024/11/Helldivers-2-Logo.png" alt="Helldivers 2 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://logos-world.net/wp-content/uploads/2023/02/CSGO-Logo.png" alt="CS:GO Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/ArmA_3_Logo_%28Black_Transparent%29_%28SVG%29.svg/800px-ArmA_3_Logo_%28Black_Transparent%29_%28SVG%29.svg.png" alt="Arma 3 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Arma_Reforger_Logo_%28Black_Transparent%29.svg/1200px-Arma_Reforger_Logo_%28Black_Transparent%29.svg.png" alt="Arma Reforger Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Forza_Horizon_logo.svg/2498px-Forza_Horizon_logo.svg.png" alt="Forza Horizon 5 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Tom_Clancy%E2%80%99s_Ghost_Recon_Wildlands_%E2%80%93_Game_logo.svg" alt="Ghost Recon Wildlands Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://media.gamestop.com/i/gamestop/Ghost_Recon_Logo/ghost-recon-breakpoint.png" alt="Ghost Recon Breakpoint Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Insurgency_Logo.png" alt="Insurgency Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/The_Crew_2_Logo.png" alt="The Crew 2 Logo">
+      </div>
+      <div class="game-card">
+        <img src="https://logos-world.net/wp-content/uploads/2021/02/Call-of-Duty-Logo-2012-2013.png" alt="Call of Duty Logo">
+      </div>
     </div>
   </div>
-</div>
-  
+
   <!-- Footer -->
   <footer>
     <p>© 2023 TEAM OBEY. All rights reserved.</p>
@@ -403,4 +450,20 @@
       <a href="https://www.instagram.com/teamobeygta/" target="_blank">Instagram</a> |
       <a href="https://www.youtube.com/channel/UCFJjmj1YRKjTVGpkXW1tFGA" target="_blank">YouTube</a>
     </p>
-  </
+  </footer>
+
+  <!-- JavaScript for Scroll Fade Effect -->
+  <script>
+    const logo = document.querySelector('.logo.scroll-fade');
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 100) {
+        logo.classList.add('hidden');
+      } else {
+        logo.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
